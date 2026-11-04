@@ -1,0 +1,263 @@
+size=get_world_size()-1
+			
+def till_all_grass():
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			if get_ground_type()==Grounds.Soil:
+				till()
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			if get_ground_type()==Grounds.Soil:
+				till()
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			if get_ground_type()==Grounds.Soil:
+				till()
+			move(North)
+		while (get_pos_x() != i): #goes left
+			if get_ground_type()==Grounds.Soil:
+				till()
+			move(West)
+		if get_ground_type()==Grounds.Soil:
+			till()
+			
+def plant_bush():
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			if get_ground_type()!=Grounds.Grassland:
+				till()
+				plant(Entities.Bush)
+			else:
+				plant(Entities.Bush)
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			if get_ground_type()!=Grounds.Grassland:
+				till()
+				plant(Entities.Bush)
+			else:
+				plant(Entities.Bush)
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			if get_ground_type()!=Grounds.Grassland:
+				till()
+				plant(Entities.Bush)
+			else:
+				plant(Entities.Bush)
+			move(North)
+		while (get_pos_x() != i): #goes left
+			if get_ground_type()!=Grounds.Grassland:
+				till()
+				plant(Entities.Bush)
+			else:
+				plant(Entities.Bush)
+			move(West)
+		if get_ground_type()!=Grounds.Grassland:
+			till()
+			plant(Entities.Bush)
+		else:
+			plant(Entities.Bush)
+			
+def plant_carrots():
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Carrot)
+			else:
+				plant(Entities.Carrot)
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Carrot)
+			else:
+				plant(Entities.Carrot)
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Carrot)
+			else:
+				plant(Entities.Carrot)
+			move(North)
+		while (get_pos_x() != i): #goes left
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Carrot)
+			else:
+				plant(Entities.Carrot)
+			move(West)
+		if get_ground_type()!=Grounds.Soil:
+			till()
+			plant(Entities.Carrot)
+		else:
+			plant(Entities.Carrot)
+
+def plant_tree():
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			if get_ground_type()==Grounds.Grassland:
+				till()
+				plant(Entities.Tree)
+			else:
+				plant(Entities.Tree)
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			if get_ground_type()==Grounds.Grassland:
+				till()
+				plant(Entities.Carrot)
+			else:
+				plant(Entities.Carrot)
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			if get_ground_type()==Grounds.Grassland:
+				till()
+				plant(Entities.Carrot)
+			else:
+				plant(Entities.Carrot)
+			move(North)
+		while (get_pos_x() != i): #goes left
+			if get_ground_type()==Grounds.Grassland:
+				till()
+				plant(Entities.Carrot)
+			else:
+				plant(Entities.Carrot)
+			move(West)
+		if get_ground_type()==Grounds.Grassland:
+			till()
+			plant(Entities.Carrot)
+		else:
+			plant(Entities.Carrot)
+			
+def plant_pumpkins():
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Pumpkin)
+			else:
+				plant(Entities.Pumpkin)
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Pumpkin)
+			else:
+				plant(Entities.Pumpkin)
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Pumpkin)
+			else:
+				plant(Entities.Pumpkin)
+			move(North)
+		while (get_pos_x() != i): #goes left
+			if get_ground_type()!=Grounds.Soil:
+				till()
+				plant(Entities.Pumpkin)
+			else:
+				plant(Entities.Pumpkin)
+			move(West)
+		if get_ground_type()!=Grounds.Soil:
+			till()
+			plant(Entities.Pumpkin)
+		else:
+			plant(Entities.Pumpkin)
+
+def harvest_all():
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			harvest()
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			harvest()
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			harvest()
+			move(North)
+		while (get_pos_x() != i): #goes left
+			harvest()
+			move(West)
+		harvest()
+
+def mine_all_even():
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	min_depth = -8
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			if min_depth > get_pos_z():
+				min_depth = get_pos_z()
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			if min_depth > get_pos_z():
+				min_depth = get_pos_z()
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			if min_depth > get_pos_z():
+				min_depth = get_pos_z()
+			move(North)
+		while (get_pos_x() != i): #goes left
+			if min_depth > get_pos_z():
+				min_depth = get_pos_z()
+			move(West)
+		if min_depth > get_pos_z():
+			min_depth = get_pos_z()
+	while (get_pos_x() !=0):
+		move(West)
+	while (get_pos_y() !=0):
+		move(South)
+	for i in range(size/2):
+		#print(i) #this is just for debugging
+		while (get_pos_y() != i): #goes down
+			while min_depth < get_pos_z():
+				dig()
+			move(South)
+		while (get_pos_x() != size-i): #goes right
+			while min_depth < get_pos_z():
+				dig()
+			move(East)
+		while (get_pos_y() != size-i): #goes up
+			while min_depth < get_pos_z():
+				dig()
+			move(North)
+		while (get_pos_x() != i): #goes left
+			while min_depth < get_pos_z():
+				dig()
+			move(West)
+		while min_depth < get_pos_z():
+			dig()
